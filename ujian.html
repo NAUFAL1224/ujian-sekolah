@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembar Ujian</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="student-info">
+            <span id="display-nama">Nama</span> | <span id="display-kelas">Kelas</span>
+        </div>
+        <div class="timer" id="timer-display">Sisa Waktu: --:--</div>
+    </div>
+
+    <div class="container" style="max-width: 800px; margin-top: 80px;">
+        <div class="card">
+            <div class="progress">Soal <span id="current-num">1</span> dari <span id="total-num">--</span></div>
+            <h3 id="pertanyaan" style="margin: 20px 0;">Memuat soal...</h3>
+            
+            <div class="options-container" id="pilihan-jawaban">
+                <!-- Pilihan jawaban akan muncul di sini via JS -->
+            </div>
+
+            <div class="nav-buttons">
+                <button id="btn-prev" class="btn" style="background: #666; color: white;">Sebelumnya</button>
+                <button id="btn-next" class="btn btn-primary">Berikutnya</button>
+                <button id="btn-selesai" class="btn btn-danger" style="display: none;">Selesai & Kirim</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="warning-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2 style="color: red;">PERINGATAN!</h2>
+            <p>Anda terdeteksi keluar dari halaman ujian atau berpindah aplikasi.</p>
+            <p>Aktivitas ini telah <b>dicatat oleh sistem</b> dan dilaporkan ke guru.</p>
+            <button class="btn btn-primary" onclick="document.getElementById('warning-modal').style.display='none'">Saya Mengerti</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/ujian.js"></script>
+</body>
+</html>
