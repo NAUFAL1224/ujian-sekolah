@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Guru</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="login-section" class="container">
+        <div class="card">
+            <h3>Login Guru</h3>
+            <form id="form-login-guru">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboard-section" class="dashboard-container" style="display: none;">
+        <div class="header" style="display:flex; justify-content:space-between; align-items:center;">
+            <h2>Dashboard Admin / Guru</h2>
+            <button id="btn-logout" class="btn btn-danger">Keluar</button>
+        </div>
+
+        <div class="card" style="margin-bottom: 20px;">
+            <h3>Buat Ujian Baru</h3>
+            <div style="display:flex; gap:10px;">
+                <input type="text" id="judul-ujian" placeholder="Nama Pelajaran (misal: Biologi Bab 1)">
+                <input type="text" id="kode-ujian-baru" placeholder="Kode Ujian (misal: BIOX1)">
+                <input type="number" id="durasi-ujian" placeholder="Durasi (Menit)">
+                <button id="btn-buat-ujian" class="btn btn-primary">Buat Ujian</button>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 20px;">
+            <h3>Tambah Soal (Pilih Ujian di Bawah)</h3>
+            <select id="pilih-ujian-soal"></select><br><br>
+            <textarea id="pertanyaan" placeholder="Ketik soal di sini..." style="width:100%; height:80px;"></textarea><br><br>
+            <input type="text" id="pil-a" placeholder="Pilihan A"><br><br>
+            <input type="text" id="pil-b" placeholder="Pilihan B"><br><br>
+            <input type="text" id="pil-c" placeholder="Pilihan C"><br><br>
+            <input type="text" id="pil-d" placeholder="Pilihan D"><br><br>
+            <select id="kunci-jawaban">
+                <option value="A">Kunci: A</option>
+                <option value="B">Kunci: B</option>
+                <option value="C">Kunci: C</option>
+                <option value="D">Kunci: D</option>
+            </select><br><br>
+            <button id="btn-simpan-soal" class="btn btn-primary">Simpan Soal</button>
+        </div>
+
+        <div class="card">
+            <h3>Hasil Ujian Siswa</h3>
+            <button id="btn-refresh" class="btn btn-primary">Muat Ulang Data</button>
+            <div style="overflow-x: auto;">
+                <table id="tabel-hasil">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Kelas</th>
+                            <th>Kode Ujian</th>
+                            <th>Benar</th>
+                            <th>Salah</th>
+                            <th>Nilai</th>
+                            <th>Status (Pelanggaran)</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/guru.js"></script>
+</body>
+</html>
