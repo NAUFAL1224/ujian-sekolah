@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Ujian Sekolah</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Portal Ujian Online</h1>
+            <p>SMP/SMA [SMP DHAMMASOKA]</p>
+        </div>
+        
+        <div class="card">
+            <h3>Login Siswa</h3>
+            <form id="form-login-siswa">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-group">
+                    <label>NIS / NISN</label>
+                    <input type="number" id="nis" required placeholder="Masukkan NISN">
+                </div>
+                <div class="form-group">
+                    <label>Kelas</label>
+                    <input type="text" id="kelas" required placeholder="Contoh: X IPA 1">
+                </div>
+                <div class="form-group">
+                    <label>Kode Ujian</label>
+                    <input type="text" id="kode-ujian" required placeholder="Dapatkan dari guru">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Mulai Ujian</button>
+            </form>
+            <div id="pesan-error" class="error-msg"></div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="login-guru.html" style="color: #666; text-decoration: none;">Login Guru / Admin</a>
+        </div>
+    </div>
+    <script type="module" src="js/siswa.js"></script>
+</body>
+</html>
